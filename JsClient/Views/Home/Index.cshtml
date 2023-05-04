@@ -2,7 +2,22 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h1>
+    Home Page
+</h1>
+
+<button onclick="signIn()">SignIn</button>
+
+
+<div>
+    <button onclick="signOut()">Sign Out</button>
 </div>
+
+<div>
+    <button onclick="callApi()">Call Api</button>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/oidc-client/1.9.1/oidc-client.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="~/main.js" asp-append-version="true"></script>

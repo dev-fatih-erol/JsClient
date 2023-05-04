@@ -1,6 +1,11 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
+﻿<script src="https://cdnjs.cloudflare.com/ajax/libs/oidc-client/1.9.1/oidc-client.min.js"></script>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<script>var userManger = new Oidc.UserManager({
+        userStore: new Oidc.WebStorageStateStore({ store: window.localStorage }),
+        response_mode: "query"
+    });
+    userManger.signinCallback().then(res => {
+        console.log(res);
+
+        window.location.href = '/home/index';
+    })</script>
